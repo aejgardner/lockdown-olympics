@@ -1,0 +1,1 @@
+http://games/api/{sport_id}/competitors

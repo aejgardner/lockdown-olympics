@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Bog Snorkelling",
+            "description": "Diving in bogs",
+            "start_time": "Friday - 13:30",
+            "arena": "Olympic",
+            "category_id": 2
+        }
+        {
+            "id": 2,
+            "name": "Cheese Rolling",
+            "description": "Catch the cheese",
+            "start_time": "Sunday - 11:00",
+            "arena": "Biggy",
+            "category_id": 2
+        }
+    ]
+}

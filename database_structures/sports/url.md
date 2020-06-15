@@ -1,0 +1,1 @@
+http://games/api/categories/{category_id}/sports
