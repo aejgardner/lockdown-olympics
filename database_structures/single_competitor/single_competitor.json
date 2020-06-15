@@ -1,11 +1,9 @@
 {
-    "data": [
-        {
-            "id": 1,
-            "name": "Sarah",
-            "bio": "She snorkel",
-            "dob": "10/02/2009",
-            "sport_id": 2
-        }
-    ]
+    "data": {
+        "id": 1,
+        "name": "Sarah",
+        "bio": "She snorkel",
+        "dob": "10/02/2009",
+        "sport_id": 2
+    }
 }
