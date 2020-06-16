@@ -41,3 +41,9 @@ Route::group(["prefix" => "/competitors"], function () {
     // list single competitor
     Route::get('/{competitor}', "API\\Competitors@show");
 });
+
+Route::group(["prefix" => "/{sport}"], function () {
+
+    // list single competitor
+    Route::get('/competitors', "API\\Sports\\Competitors@show");
+});
