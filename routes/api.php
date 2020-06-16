@@ -35,7 +35,9 @@ Route::group(["prefix" => "/categories"], function () {
 
 Route::group(["prefix" => "/competitors"], function () {
 
+    // list all competitors
+    Route::get('', [Competitors::class, "index"]);
+
     // list single competitor
     Route::get('/{competitor}', "API\\Competitors@show");
 });
-

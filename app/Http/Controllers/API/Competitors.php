@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Competitor;
 
 use App\Http\Resources\API\CompetitorResource;
+use App\Http\Resources\API\CompetitorListResource;
 
 class Competitors extends Controller
 {
@@ -18,7 +19,9 @@ class Competitors extends Controller
      */
     public function index()
     {
-        //
+        $competitors = Competitor::all();
+
+        return CompetitorListResource::collection($competitors);
     }
 
     /**
@@ -40,7 +43,7 @@ class Competitors extends Controller
      */
     public function show(Competitor $competitor)
     {
-        return new CompetitorResource($competitor); 
+        return new CompetitorResource($competitor);
     }
 
     /**
