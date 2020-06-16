@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 use App\Competitor;
 
 use App\Http\Resources\API\CompetitorResource;
 use App\Http\Resources\API\CompetitorListResource;
+
+use App\Http\Requests\API\CompetitorRequest as Request;
 
 class Competitors extends Controller
 {
@@ -32,7 +33,11 @@ class Competitors extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $competitor = Competitor::create($data);
+
+        return new CompetitorResource($competitor);
     }
 
     /**
