@@ -58,9 +58,13 @@ class Competitors extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Competitor $competitor)
     {
-        //
+        $data = $request->all();
+
+        $competitor->fill($data)->save();
+
+        return new CompetitorResource($competitor);
     }
 
     /**
