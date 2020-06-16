@@ -40,8 +40,10 @@ Route::group(["prefix" => "/competitors"], function () {
 
     // list single competitor
     Route::get('/{competitor}', "API\\Competitors@show");
-
+    //store a competitor details
     Route::post('', "API\\Competitors@store");
+    //update a competitor details
+    Route::patch('/{competitor}', "API\\Competitors@update");
 });
 
 Route::group(["prefix" => "/{sport}"], function () {
