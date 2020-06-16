@@ -12,4 +12,10 @@ class Sport extends Model
         // a sport belongs to a category
         return $this->belongsTo(Category::class);
     }
+
+    public function competitors()
+    {
+        // use hasMany relationship method
+        return $this->hasMany(Competitor::class);
+    }
 }
