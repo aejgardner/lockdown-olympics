@@ -21,6 +21,7 @@ class SportResource extends JsonResource
             "start_time" => $this->start_time,
             "arena" => $this->arena,
             "category_id" => $this->category_id,
+            "img_pathway" => $this->img_pathway,
         ];
     }
 }
