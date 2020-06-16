@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\Categories;
-
+use App\Http\Controllers\API\Competitors;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,3 +31,11 @@ Route::group(["prefix" => "/categories"], function () {
         Route::get('/sports', 'API\\Categories\\sports@show');
     });
 });
+
+
+Route::group(["prefix" => "/competitors"], function () {
+
+    // list single competitor
+    Route::get('/{competitor}', "API\\Competitors@show");
+});
+
