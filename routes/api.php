@@ -24,4 +24,10 @@ Route::group(["prefix" => "/categories"], function () {
 
     // list all categories
     Route::get('', [Categories::class, "index"]);
+
+    // list sports belonging to a specific category
+    Route::group(["prefix" => "/{category}"], function () {
+
+        Route::get('/sports', 'API\\Categories\\sports@show');
+    });
 });
