@@ -25,7 +25,10 @@ Route::group(["prefix" => "/categories"], function () {
     // list all categories
     Route::get('', [Categories::class, "index"]);
 
-    // list sports belonging to a specific category
+    //update a category's details
+    Route::patch('/{category}', "API\\Categories@update");
+
+    // list sports belonging to a specific category (/{category}/sports)
     Route::group(["prefix" => "/{category}"], function () {
 
         Route::get('/sports', 'API\\Categories\\sports@show');
