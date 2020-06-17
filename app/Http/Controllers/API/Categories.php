@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Category;
+use App\Http\Resources\API\CategoryResource;
 
 class Categories extends Controller
 {
@@ -47,9 +48,13 @@ class Categories extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        $data = $request->all();
+
+        $category->fill($data)->save();
+
+        return new CategoryResource($category);
     }
 
     /**

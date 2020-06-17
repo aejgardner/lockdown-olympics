@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+    protected $fillable = ["name", "img_pathway"];
+
     // plural, as a category can have multiple sports
     public function sports()
     {
