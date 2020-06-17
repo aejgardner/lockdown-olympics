@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\Categories;
 use App\Http\Controllers\API\Competitors;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -35,7 +36,13 @@ Route::group(["prefix" => "/categories"], function () {
     });
 });
 
+//SPORTS
+Route::group(["prefix" => "/sports"], function () {
+    //update a sport's details
+    Route::patch('/{sport}', "API\\Sports@update");
+});
 
+// COMPETITORS
 Route::group(["prefix" => "/competitors"], function () {
 
     // list all competitors

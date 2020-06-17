@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sport extends Model
 {
+    protected $fillable = ["id", "name", "description", "start_time", "arena", "category_id", "img_pathway"];
     // use singular, as a sport only has one category
     public function category()
     {
