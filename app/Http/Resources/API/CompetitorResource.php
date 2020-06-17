@@ -19,7 +19,7 @@ class CompetitorResource extends JsonResource
             "name" => $this->name,
             "bio" => $this->bio,
             "dob" => $this->dob,
-            "sport_id" => $this->sport_id,
+            "sport" => $this->sport->name,
             "img_pathway" => $this->img_pathway,
         ];
     }
