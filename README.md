@@ -12,28 +12,18 @@ All requests should:
 
 #### `GET /categories`
 
-Will return an array of all categories, contained in objects with the following fields:
-    -`id`: integer
-    -`created_at`:string - timestamp^
-    -`updated_at`:string - timestamp^
-    -`name`: string
-    -`img_pathway`: string - image pathway for use on frontend
+Will return a list of all categories, with the following fields included:
 
-^These fields will be removed in a future update, and the output updated to be an object containing a key = data and a value = array of objects
+- `id`: integer
+- `name`: string
+- `img_pathway`: string - image pathway for use on frontend
 
 #### `GET /competitors`
 
-Will return an object containing the details of all competitors. The response will be as follows:
+Will return a list of all the competitors, with the following fields included:
 
-{
-    "data" : [
-        {
-            -`id`: integer
-            -`name`: string
-        } 
-        ......
-    ]
-}
+- `id`: integer
+- `name`: string
 
 #### `GET /<sportId>/competitors`
 
@@ -41,39 +31,26 @@ Will return a list of competitors as for Get /competitors, but will only return 
 
 #### Standard response for sports
 
-When requests for sports are sent, the standard response will be an object as follows:
+When requests for sports are sent, the standard response will be as follows:
 
-{
-    "data" : [
-        {
-            -`id`: integer
-            -`name`: string
-            -`description`: string
-            -`start_time`: string - start time and day
-            -`arena`: string
-            -`category_id`: integer
-            -`img_pathway`: string - image pathway for use on frontend
-        } 
-        ......
-    ]
-}
+- `id`: integer
+- `name`: string
+- `description`: string
+- `start_time`: string - start time and day
+- `arena`: string
+- `category_id`: integer
+- `img_pathway`: string - image pathway for use on frontend
 
 #### Standard response for competitors
 
 When the below requests for competitors are sent, the standard response will be an object as follows:
 
-{
-    "data" : [
-        {
-            -`id`: integer
-            -`name`: string
-            -`bio`: string
-            -`dob`: string - date format yyyy-mm-dd
-            -`sport`: string - determined by one to many relationship between sport and competitor
-            -`img_pathway`: string - image pathway for use on frontend
-        } 
-    ]
-}
+- `id`: integer
+- `name`: string
+- `bio`: string
+- `dob`: string - date format yyyy-mm-dd
+- `sport`: string - determined by one to many relationship between sport and competitor
+- `img_pathway`: string - image pathway for use on frontend
 
 #### `GET /categories/<categoryId>/sports`
 
@@ -87,11 +64,11 @@ Will return a standard competitors response containing the details of the compet
 
 Creates a new competitor. Request should contain:
 
--`name`: string with up to 50 characters
--`bio`: string
--`dob`: date formatted as a string yyyy-mm-dd
--`sport_id`: integer relating to the id of the relevant sport
--`img_pathway`: string with up to 200 characters
+- `name`: string with up to 50 characters
+- `bio`: string
+- `dob`: date formatted as a string yyyy-mm-dd
+- `sport_id`: integer relating to the id of the relevant sport
+- `img_pathway`: string with up to 200 characters
 
 All fields required. Standard competitors response returned (for the competitor just posted).
 
@@ -99,8 +76,8 @@ All fields required. Standard competitors response returned (for the competitor 
 
 Updates a category. Request should contain:
 
--`id`: integer
--`name`: string
+- `id`: integer
+- `name`: string
 
 All fields required. Same response as for the GET /categories (for the category just updated).
 
@@ -108,13 +85,13 @@ All fields required. Same response as for the GET /categories (for the category 
 
 Updates a sport. Request should contain:
 
--`id`: integer
--`name`: string
--`description`: string
--`start_time`: string - start time and day
--`arena`: string
--`category_id`: integer
--`img_pathway`: string - image pathway for use on frontend
+- `id`: integer
+- `name`: string
+- `description`: string
+- `start_time`: string - start time and day
+- `arena`: string
+- `category_id`: integer
+- `img_pathway`: string - image pathway for use on frontend
 
 All fields required. Standard sports response returned (for the sport just updated).
 
@@ -122,11 +99,11 @@ All fields required. Standard sports response returned (for the sport just updat
 
 Updates a competitor. Request should contain:
 
--`name`: string with up to 50 characters
--`bio`: string
--`dob`: date formatted as a string yyyy-mm-dd
--`sport_id`: integer relating to the id of the relevant sport
--`img_pathway`: string with up to 200 characters
+- `name`: string with up to 50 characters
+- `bio`: string
+- `dob`: date formatted as a string yyyy-mm-dd
+- `sport_id`: integer relating to the id of the relevant sport
+- `img_pathway`: string with up to 200 characters
 
 All fields required. Standard competitors response returned (for the competitor just updated).
 
