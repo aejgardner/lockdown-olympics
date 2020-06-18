@@ -1,10 +1,10 @@
-# Games API for 'Lockdown Olympics' project
+# API for 'Lockdown Olympics' project
 
 ## General
 
 All requests should:
 
-- Use the basename `https://games/api/`
+- Use the basename `https://olympics.developme.space/api`
 - Be sent using JSON and with the `Accept: application/json` header
 - No authentication currently required
 
