@@ -32,7 +32,7 @@ Route::group(["prefix" => "/categories"], function () {
     // list sports belonging to a specific category (/{category}/sports)
     Route::group(["prefix" => "/{category}"], function () {
 
-        Route::get('/sports', 'API\\Categories\\sports@show');
+        Route::get('/sports', 'API\\Categories\\Sports@show');
     });
 });
 
