@@ -24,7 +24,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(["prefix" => "/categories"], function () {
 
     // list all categories
-    Route::get('', [Categories::class, "index"]);
+    Route::get('', "API\\Categories@index");
 
     //update a category's details
     Route::patch('/{category}', "API\\Categories@update");
