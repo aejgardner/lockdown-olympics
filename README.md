@@ -56,7 +56,7 @@ When the below requests for competitors are sent, the standard response will be 
 
 Will return a standard sports response containing the details of the sports with the given category id.          
 
-#### `GET /competitors/<competitorId>
+#### `GET /competitors/<competitorId>`
 
 Will return a standard competitors response containing the details of the competitor with the given competitor id. 
 
@@ -107,4 +107,17 @@ Updates a competitor. Request should contain:
 
 All fields required. Standard competitors response returned (for the competitor just updated).
 
-This API was created using Laravel.
+## Installation
+
+This API was created using Laravel. Follow these steps to install the project:
+- Clone the repo and cd into the folder created
+- vendor/bin/homestead make
+- cp .env.example .env
+- Change db name and password in .env
+- vagrant up
+- vagrant ssh
+- cd code
+- art key:generate
+- art migrate
+
+
